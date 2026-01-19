@@ -74,5 +74,10 @@ pytest -v
 ## Environment Variables
 - `HF_TOKEN`: HuggingFace token for model downloads (set in .env)
 
+## Additional notes
+- tested on apple M3 processor with mps backend
+  - on M3 (possible apple M series),  Dino-v3 models results NaN with `float16`, use `bfloat16` or `float32`
+  - The code probably runs fine with `faiss` search (on non non apple M chips) with minimal changes. It results segmentation fault when using `SQfp16` for half precision on M3 processor.
+
 ## License
-MIT
+MITgit 

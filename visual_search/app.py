@@ -172,7 +172,7 @@ def create_ui():
     
     with gr.Blocks(title="Multimodal Image Search", theme=gr.themes.Soft()) as demo:
         gr.Markdown("# 🔍 Multimodal Image Search")
-        gr.Markdown("Search images using DINO/SigLIP embeddings and FAISS indices")
+        gr.Markdown("Search images using DINO/SigLIP embeddings and USearch indices")
         
         with gr.Tabs():
             # Tab 1: Image-to-Image Search
@@ -276,7 +276,7 @@ def create_ui():
         
         gr.Markdown("---")
         gr.Markdown(
-            "**Note:** Make sure FAISS indices are built using `index_xmodal.py` before running this UI.\n\n"
+            "**Note:** Make sure Usearch indices are built using `index_xmodal.py` before running this UI.\n\n"
             "Example: `python -m visual_search.index_xmodal --model dino --dataset flickr8k`"
         )
     
